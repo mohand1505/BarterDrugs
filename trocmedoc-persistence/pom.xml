@@ -5,6 +5,7 @@
 		<groupId>com.trocmedoc</groupId>
 		<artifactId>trocmedoc-root</artifactId>
 		<version>1.0</version>
+		<relativePath>../trocmedoc-root/pom.xml</relativePath>
 	</parent>
 	<artifactId>trocmedoc-persistence</artifactId>
 	<description>Persistence module for Trocmedoc application</description>
