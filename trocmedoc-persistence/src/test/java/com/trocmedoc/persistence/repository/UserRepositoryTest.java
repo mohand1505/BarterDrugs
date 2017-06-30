@@ -14,6 +14,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.trocmedoc.common.documents.User;
 import com.trocmedoc.persistence.config.TrocmedocConfiguration;
 
+/**
+ * @author andriantomanga
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = TrocmedocConfiguration.class)
 public class UserRepositoryTest {

@@ -11,12 +11,15 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
 
+/**
+ * @author andriantomanga
+ */
 @Configuration
 @EnableMongoRepositories(basePackages = "com.trocmedoc.persistence.repository")
 @PropertySources({ @PropertySource("classpath:/com/trocmedoc/persistence/config/mongo.properties"),
 
 		/* override propertie on production env */
-		@PropertySource(value = "file:${jerytodik_home}/config/mongo.properties", ignoreResourceNotFound = true) })
+		@PropertySource(value = "file:${trocmedoc_home}/config/mongo.properties", ignoreResourceNotFound = true) })
 public class TrocmedocConfiguration extends AbstractMongoConfiguration {
 
 	@Autowired

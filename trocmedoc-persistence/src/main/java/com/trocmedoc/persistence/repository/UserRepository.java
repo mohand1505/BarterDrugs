@@ -5,6 +5,9 @@ import org.springframework.stereotype.Repository;
 
 import com.trocmedoc.common.documents.User;
 
+/**
+ * @author andriantomanga
+ */
 @Repository(value = "userRepository")
 public interface UserRepository extends MongoRepository<User, String> {
 
