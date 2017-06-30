@@ -12,11 +12,11 @@
 
 	<dependencies>
 
-		<!-- Testing Library -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit-dep</artifactId>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
 		</dependency>
+
 	</dependencies>
 
 </project>
