@@ -1,14 +1,14 @@
-package com.trocmedoc.commong.utils;
+package com.trocmedoc.common.utils;
 
 import org.junit.Test;
+
+import com.trocmedoc.common.utils.TrocmedocUtil;
 
 import junit.framework.Assert;
 
 public class TrocmedocUtilTest {
 
-	/**
-	 * Testing {@link TrocmedocUtil}
-	 */
+	
 	@Test
 	public void testGetVersion() {
 

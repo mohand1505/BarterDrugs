@@ -1,4 +1,4 @@
-package com.trocmedoc.commong.utils;
+package com.trocmedoc.common.utils;
 
 import java.io.InputStream;
 import java.util.Properties;

@@ -1,4 +1,4 @@
 #!/bin/sh
 cd trocmedoc-root
-mvn clean install
+mvn -DskipTests=true clean install
 

@@ -19,23 +19,4 @@
 		</dependency>
 	</dependencies>
 
-
-	<build>
-		<plugins>
-			<!-- For more infos abour maven-jar-plugin, please take a look here : 
-				http://maven.apache.org/shared/maven-archiver/index.html -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<configuration>
-					<archive>
-						<manifest>
-							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-							<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-						</manifest>
-					</archive>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
 </project>
