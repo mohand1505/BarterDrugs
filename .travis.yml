@@ -3,6 +3,7 @@ jdk:
 - oraclejdk8
 os:
 - linux
-script: sh jerytodik-build/build-jerytodik.sh
+script: sh trocmedoc-build/build.sh
+
 
 
