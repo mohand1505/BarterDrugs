@@ -1,4 +1,5 @@
 #!/bin/sh
 cd trocmedoc-root
-mvn -DskipTests=true clean install
+mvn clean install -Dmaven.test.skip=true
+
 
