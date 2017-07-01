@@ -26,6 +26,7 @@
 		<mockito.version>1.9.0</mockito.version>
 		<spring.data.mongodb.version>1.7.2.RELEASE</spring.data.mongodb.version>
 		<spring.version>4.0.9.RELEASE</spring.version>
+		<dozer.version>5.4.0</dozer.version>
 	</properties>
 
 	<build>
@@ -78,6 +79,14 @@
 				<artifactId>spring-test</artifactId>
 				<version>${spring.version}</version>
 				<scope>test</scope>
+			</dependency>
+
+			<!-- Mapper -->
+			<dependency>
+				<groupId>net.sf.dozer</groupId>
+				<artifactId>dozer</artifactId>
+				<version>${dozer.version}</version>
+				<scope>provided</scope>
 			</dependency>
 
 		</dependencies>

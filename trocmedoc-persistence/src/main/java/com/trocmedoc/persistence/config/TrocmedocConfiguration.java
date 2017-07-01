@@ -1,6 +1,10 @@
 package com.trocmedoc.persistence.config;
 
+import org.dozer.DozerBeanMapper;
+import org.dozer.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
@@ -15,6 +19,7 @@ import com.mongodb.MongoClient;
  * @author andriantomanga
  */
 @Configuration
+@ComponentScan(basePackages = "com.trocmedoc")
 @EnableMongoRepositories(basePackages = "com.trocmedoc.persistence.repository")
 @PropertySources({ @PropertySource("classpath:/com/trocmedoc/persistence/config/mongo.properties"),
 
@@ -41,6 +46,12 @@ public class TrocmedocConfiguration extends AbstractMongoConfiguration {
 	protected String getMappingBasePackage() {
 
 		return "com.trocmedoc";
+	}
+
+	@Bean
+	protected Mapper getMapper() {
+
+		return new DozerBeanMapper();
 	}
 
 }

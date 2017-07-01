@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.trocmedoc.common.documents.User;
+import com.trocmedoc.common.documents.administration.User;
 import com.trocmedoc.persistence.config.TrocmedocConfiguration;
 
 /**
