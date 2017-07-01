@@ -11,6 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.trocmedoc.common.documents.administration.User;
 import com.trocmedoc.persistence.config.TrocmedocConfiguration;
+import com.trocmedoc.persistence.repository.administration.UserRepository;
 
 /**
  * @author andriantomanga

@@ -1,4 +1,4 @@
-package com.trocmedoc.persistence.repository;
+package com.trocmedoc.persistence.repository.administration;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;

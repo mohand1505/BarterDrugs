@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.trocmedoc.common.documents.administration.User;
 import com.trocmedoc.common.dto.administration.UserDto;
 import com.trocmedoc.common.exceptions.TrocmedocServiceException;
-import com.trocmedoc.persistence.repository.UserRepository;
+import com.trocmedoc.persistence.repository.administration.UserRepository;
 import com.trocmedoc.service.AbstractMutableTrocmedocService;
 import com.trocmedoc.service.administration.UserService;
 
