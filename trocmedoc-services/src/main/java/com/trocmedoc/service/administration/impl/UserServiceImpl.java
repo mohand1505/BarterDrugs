@@ -8,23 +8,17 @@ import com.trocmedoc.common.documents.administration.User;
 import com.trocmedoc.common.dto.administration.UserDto;
 import com.trocmedoc.common.exceptions.TrocmedocServiceException;
 import com.trocmedoc.persistence.repository.UserRepository;
-import com.trocmedoc.service.AbstractTrocmedocService;
+import com.trocmedoc.service.AbstractMutableTrocmedocService;
 import com.trocmedoc.service.administration.UserService;
 
 /**
  * @author andriantomanga
  */
 @Service(value = "userService")
-public class UserServiceImpl extends AbstractTrocmedocService<User, UserDto> implements UserService {
+public class UserServiceImpl extends AbstractMutableTrocmedocService<User, UserDto> implements UserService {
 
 	@Autowired
 	private UserRepository userRepository;
-
-	@Override
-	public MongoRepository<User, String> getRepository() {
-
-		return userRepository;
-	}
 
 	@Override
 	public UserDto authentifyUser(String email, String password) throws TrocmedocServiceException {
@@ -39,7 +33,25 @@ public class UserServiceImpl extends AbstractTrocmedocService<User, UserDto> imp
 
 			throw new TrocmedocServiceException("Wrong password ...");
 		}
-		return convertToDto(foundUser, UserDto.class);
+		return convertToDto(foundUser);
+	}
+	
+	@Override
+	public MongoRepository<User, String> getRepository() {
+
+		return userRepository;
+	}
+
+	@Override
+	public UserDto convertToDto(User user) {
+
+		return convertToDto(user, UserDto.class);
+	}
+	
+	@Override
+	public User convertToDocument(UserDto dto) {
+		
+		return convertToDocument(dto, User.class);
 	}
 
 }

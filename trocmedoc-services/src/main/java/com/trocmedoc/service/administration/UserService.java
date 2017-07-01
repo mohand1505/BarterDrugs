@@ -6,12 +6,12 @@ package com.trocmedoc.service.administration;
 import com.trocmedoc.common.documents.administration.User;
 import com.trocmedoc.common.dto.administration.UserDto;
 import com.trocmedoc.common.exceptions.TrocmedocServiceException;
-import com.trocmedoc.service.TrocmedocService;
+import com.trocmedoc.service.MutableTrocmedocService;
 
 /**
  * @author andriantomanga
  */
-public interface UserService extends TrocmedocService<User, UserDto> {
+public interface UserService extends MutableTrocmedocService<User, UserDto> {
 
 	/**
 	 * Authentify the user by using his email and password

@@ -34,4 +34,17 @@ public interface TrocmedocService<Document extends TrocmedocDocument, Dto extend
 	 */
 	Document convertToDocument(Dto dto, Class<Document> targetClass);
 
+	/**
+	 * 
+	 * @param document
+	 * @return
+	 */
+	Dto convertToDto(Document document);
+
+	/**
+	 * 
+	 * @param dto
+	 * @return
+	 */
+	Document convertToDocument(Dto dto);
 }
