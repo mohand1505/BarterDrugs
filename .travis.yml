@@ -3,7 +3,7 @@ jdk:
 - oraclejdk8
 os:
 - linux
-script: sh trocmedoc-build/build.sh
+script: sh medocExchange-build/build.sh
 
 
 
