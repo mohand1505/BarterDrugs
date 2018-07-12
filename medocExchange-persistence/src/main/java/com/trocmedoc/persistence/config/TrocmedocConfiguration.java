@@ -16,6 +16,8 @@ import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
 
 /**
+ * The Class TrocmedocConfiguration.
+ *
  * @author andriantomanga
  */
 @Configuration
@@ -27,27 +29,42 @@ import com.mongodb.MongoClient;
 		@PropertySource(value = "file:${trocmedoc_home}/config/mongo.properties", ignoreResourceNotFound = true) })
 public class TrocmedocConfiguration extends AbstractMongoConfiguration {
 
+	/** The env. */
 	@Autowired
 	Environment env;
 
+	/* (non-Javadoc)
+	 * @see org.springframework.data.mongodb.config.AbstractMongoConfiguration#getDatabaseName()
+	 */
 	@Override
 	protected String getDatabaseName() {
 
 		return env.getProperty("db.name");
 	}
 
+	/* (non-Javadoc)
+	 * @see org.springframework.data.mongodb.config.AbstractMongoConfiguration#mongo()
+	 */
 	@Override
 	public Mongo mongo() throws Exception {
 
 		return new MongoClient(env.getProperty("db.host"), Integer.parseInt(env.getProperty("db.port")));
 	}
 
+	/* (non-Javadoc)
+	 * @see org.springframework.data.mongodb.config.AbstractMongoConfiguration#getMappingBasePackage()
+	 */
 	@Override
 	protected String getMappingBasePackage() {
 
 		return "com.trocmedoc";
 	}
 
+	/**
+	 * Gets the mapper.
+	 *
+	 * @return the mapper
+	 */
 	@Bean
 	protected Mapper getMapper() {
 

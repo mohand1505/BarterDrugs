@@ -4,14 +4,24 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
+ * The Class TrocmedocUtil.
+ *
  * @author andriantomanga
  */
 public final class TrocmedocUtil {
 
+	/**
+	 * Instantiates a new trocmedoc util.
+	 */
 	private TrocmedocUtil() {
 		throw new AssertionError();
 	}
 
+	/**
+	 * Gets the version.
+	 *
+	 * @return the version
+	 */
 	public synchronized static final String getVersion() {
 		String version = null;
 

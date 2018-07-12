@@ -14,17 +14,24 @@ import com.trocmedoc.persistence.config.TrocmedocConfiguration;
 import com.trocmedoc.persistence.repository.administration.UserRepository;
 
 /**
+ * The Class UserRepositoryTest.
+ *
  * @author andriantomanga
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = TrocmedocConfiguration.class)
 public class UserRepositoryTest {
 
+	/** The user repository. */
 	@Autowired
 	private UserRepository userRepository;
 
+	/** The Constant FOR_TEST_USER_ID. */
 	private static final String FOR_TEST_USER_ID = "for-test-user-id";
 
+	/**
+	 * Before.
+	 */
 	@Before
 	public void before() {
 
@@ -41,6 +48,9 @@ public class UserRepositoryTest {
 		userRepository.save(Obama);
 	}
 
+	/**
+	 * After.
+	 */
 	@After
 	public void after() {
 
@@ -48,6 +58,9 @@ public class UserRepositoryTest {
 		userRepository.delete(userRepository.findOne(FOR_TEST_USER_ID));
 	}
 
+	/**
+	 * Test.
+	 */
 	@Test
 	public void test() {
 

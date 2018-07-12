@@ -12,14 +12,20 @@ import com.trocmedoc.service.AbstractMutableTrocmedocService;
 import com.trocmedoc.service.administration.UserService;
 
 /**
+ * The Class UserServiceImpl.
+ *
  * @author andriantomanga
  */
 @Service(value = "userService")
 public class UserServiceImpl extends AbstractMutableTrocmedocService<User, UserDto> implements UserService {
 
+	/** The user repository. */
 	@Autowired
 	private UserRepository userRepository;
 
+	/* (non-Javadoc)
+	 * @see com.trocmedoc.service.administration.UserService#authentifyUser(java.lang.String, java.lang.String)
+	 */
 	@Override
 	public UserDto authentifyUser(String email, String password) throws TrocmedocServiceException {
 
@@ -36,18 +42,27 @@ public class UserServiceImpl extends AbstractMutableTrocmedocService<User, UserD
 		return convertToDto(foundUser);
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.trocmedoc.service.TrocmedocService#getRepository()
+	 */
 	@Override
 	public MongoRepository<User, String> getRepository() {
 
 		return userRepository;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.trocmedoc.service.TrocmedocService#convertToDto(com.trocmedoc.common.documents.TrocmedocDocument)
+	 */
 	@Override
 	public UserDto convertToDto(User user) {
 
 		return convertToDto(user, UserDto.class);
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.trocmedoc.service.TrocmedocService#convertToDocument(com.trocmedoc.common.dto.AbstractDto)
+	 */
 	@Override
 	public User convertToDocument(UserDto dto) {
 		
